@@ -1,0 +1,20 @@
+[
+  {
+    "id": "f9b5af59-72da-4516-9a86-6ce6e371a662",
+    "Name": "Green-villa",
+    "Price": "1500",
+    "Location": "Mumbai",
+    "Rating": "4",
+    "PhoneNumber": "943573594",
+    "details": "A beautiful 3-bedroom villa with lush garden views."
+  },
+  {
+    "id": "0b441e5c-a27d-48ff-a2bd-9ff768c3145c",
+    "Name": "Blue-apartment",
+    "Price": "2000",
+    "Location": "Delhi",
+    "Rating": "3",
+    "PhoneNumber": "9358945455",
+    "details": "A stylish 2-bedroom apartment with city skyline views."
+  }
+]

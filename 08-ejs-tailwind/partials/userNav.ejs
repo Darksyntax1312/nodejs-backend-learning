@@ -1,0 +1,22 @@
+<header class="userNavContainer">
+  <div class="navContainer">
+    <h1>Airbnb</h1>
+    <nav class="navItems">
+
+      <a class="<%= (typeof userHomeList !== 'undefined' && userHomeList === '/User-home-list') ? 'chintu' : 'pintu' %>"
+        href="/User-home-list">Home</a>
+
+      <a class="<%= (typeof UserHomeLink !== 'undefined' && UserHomeLink === '/User-page') ? 'chintu' : 'pintu' %>"
+        href="/User-page">Homes list</a>
+
+      <a class="<%= (typeof userFavouriteLink !== 'undefined' && userFavouriteLink === '/User-favourite') ? 'chintu' : 'pintu' %>"
+        href="/User-favourite">Favourite</a>
+
+      <a class="<%= (typeof userBookingLink !== 'undefined' && userBookingLink === '/User-bookings') ? 'chintu' : 'pintu' %>"
+        href="/User-bookings">Bookings</a>
+
+      <a class="LogoutButton" href="/">Log out</a>
+
+    </nav>
+  </div>
+</header>

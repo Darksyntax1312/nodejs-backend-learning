@@ -1,0 +1,17 @@
+<%- include("../partials/head", { title: title }) %>
+
+
+    <body>
+        <%- include("../partials/Header") %>
+            <div class="homeContainer">
+                <div class="homeContainerItems">
+                    <h1>
+                        <%= message%>
+                    </h1>
+                    <a href="/host/add-home" class="addDetails">ADD HOMES</a>
+                </div>
+            </div>
+            <%- include("../partials/footer") %>
+    </body>
+
+    </html>

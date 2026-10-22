@@ -1,0 +1,157 @@
+<%- include("../partials/head", { title: title }) %>
+
+  <body>
+    <%- include("../partials/Header") %>
+      <!-- Put the new user header in place of this host systems header -->
+
+      <div class="space">
+        <h1 class="homes">Available Homes 🏡</h1>
+        <!-- <p>You are in the result page.</p> -->
+        <div class="cardLayoutContainer">
+          <% if (items.length===0) { %>
+            <p>No homes added yet.</p>
+            <% } else { %>
+              <% items.forEach((item)=> { %>
+                <form method="post">
+                  <div class="homesCardContainer">
+                    <div class="topContainer">
+                      <img class="homeImage" src=" https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400 "
+                        alt="Home image" class="homeImage">
+                    </div>
+
+                    <div class="bottomContainer">
+                      <div class="topItem">
+                        <div class="providerName">
+                          <%= item.Name %>
+                        </div>
+                        <div class="rating">⭐<%= item.Rating%>
+                        </div>
+                      </div>
+                      <div class="homeLocation">
+                        <%= item.Location %>
+                      </div>
+                      <div class="priceContainer">
+                        <div class="realPrice">Rs<%=item.Price%>
+                        </div>
+                        <div class="priceBar">/</div>
+                        <div class="night">night</div>
+                      </div>
+                      <div class="buttonContainer">
+
+                        <div class="form1">
+                          <button type="button" class="editButton" data-id="<%=item.id%>">Edit</button>
+                        </div>
+                        <button type="button" class="deleteButton"  data-id="<%=item.id%>">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <% }) %>
+                  <% } %>
+        </div>
+        <%- include("../partials/footer") %>
+
+
+
+
+          <div class="editHomePage">
+            <label for="A19258">Edit home page :</label>
+            <input type="text" id="A19258" name="Edit home">
+
+          </div>
+      </div>
+
+
+      <div class="overlay" id="A19352">
+        <div class="overlayContainer">
+          <h1 class="heading-content-1">Edit Your Home 🏠</h1>
+          <div class="heading-content-2">Fill in the details below to edit your property.</div>
+          <form method="post">
+            <div class="photoLink">
+              <div>Photo Link (URL)</div>
+              <input type="text" name="imageLink" placeholder="Enter your house image link here....">
+            </div>
+
+            <div class="priceNameContainer">
+
+              <div class="homeNameContainer">
+                <div>Home name</div>
+                <input type="text" name="homeName" placeholder="Enter your home name here...">
+              </div>
+
+              <div class="newpriceContainer">
+                <div>Price(per night)</div>
+                <input type="text" name="Price" placeholder="Enter your home price here...">
+              </div>
+
+
+            </div>
+
+
+
+            <div class="locationRatingContainer">
+
+              <div class="locationContainer">
+                <div>Location</div>
+                <input type="text" name="Location" placeholder="Enter your home Location here...">
+              </div>
+
+              <div class="ratingContainer">
+                <div>Rating(1-5)</div>
+                <input type="text" name="Rating" placeholder="Enter your home rating here...">
+              </div>
+
+
+            </div>
+
+
+            <div class="phoneNumberContainer">
+              <div>Phone number</div>
+              <input type="number" name="phoneNumber" placeholder="Enter your phone number here....">
+            </div>
+
+
+            <div class="homeDetailsContainer">
+              <label>Home details</label>
+              <textarea rows="5" name="Details" placeholder="Enter your home details here..."></textarea>
+            </div>
+
+            <div class="modalActions">
+              <button type="button" class="btnCancel">Cancel</button>
+              <button type="button" class="btnSave">Save &amp; Change</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="/js/edit-home.js"></script>
+  </body>
+
+  </html>

@@ -1,0 +1,22 @@
+{
+  "name": "practice-folder",
+  "version": "1.0.0",
+  "description": "This is the folder where i am going to practice lec 10 by myself",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js",
+    "tailwind:build": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/style.css --minify",
+    "tailwind:watch": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "nodemon": "^3.1.14",
+    "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "ejs": "^7.0.1",
+    "express": "^5.2.1"
+  }
+}
